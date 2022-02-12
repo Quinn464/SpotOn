@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+	  <!--ADD THE USER AND SONG GITHUB-->
     <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Playlist.cs" />

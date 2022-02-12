@@ -84,6 +84,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArtistCreate.cs" />
+    <Compile Include="ArtistDetail.cs" />
+    <Compile Include="ArtistEdit.cs" />
+    <Compile Include="ArtistListItem.cs" />
     <Compile Include="PlaylistCreate.cs" />
     <Compile Include="PlaylistDetail.cs" />
     <Compile Include="PlaylistEdit.cs" />

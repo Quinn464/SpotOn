@@ -8,34 +8,16 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Data
 {
-    public class Playlist 
+    public class Album
     {
         [Key]
-        public int PlaylistId { get; set; }
-
+        public int AlbumId { get; set; }
+        [ForeignKey(nameof(Song))]
+        public int SongId { get; set; }
         [Required]
-        public List<Song> PlaylistContent { get; set; }
-
+        public GenreType GenreType { get; set; }
         [Required]
         public string Name { get; set; }
-
-        [Required]
         public bool IsDeleted { get; set; }
-
-        
-        
-        [Required]
-        public DateTimeOffset CreatedUtc { get; set; }
-
-        public DateTimeOffset? ModifiedUtc { get; set; }
-
-       
-       
-
-        
-
-
-
-
     }
 }

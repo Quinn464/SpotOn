@@ -24,12 +24,14 @@ namespace SpotOn.Data
     {
         [Key]
         public int SongId { get; set; }
+        [Required]
         public string Name { get; set; }
         public bool IsDeleted { get; set; }
-        //[ForeignKey(nameof(Album))]
+        [ForeignKey(nameof(Album))]
         public int AlbumId { get; set; }
-        //[ForeignKey(nameof(Artist))]
+        [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
+        [Required]
         public GenreType Genre { get; set; }
     }
 }

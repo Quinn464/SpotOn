@@ -14,23 +14,24 @@ namespace SpotOn.Data
         public int PaylistId { get; set; }
 
         [Required]
-        public Guid UserId { get; set; }
-        
-        [Required]
         public string Content { get; set; }
 
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public bool IsDeleted { get; set; }
+
+        //[Required]
+        //public Guid UserId { get; set; }
+        
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
 
         public DateTimeOffset? ModifiedUtc { get; set; }
 
        
-        //Foreign Key to Post via Id w/virtual Post)
-
-        [ForeignKey(nameof(Artist))]
-        public int ArtistId { get; set; }
-
-        public virtual Artist Artist { get; set; }
+       
 
         
 

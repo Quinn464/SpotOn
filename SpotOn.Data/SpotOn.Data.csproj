@@ -89,6 +89,7 @@
     <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Playlist.cs" />
+    <Compile Include="Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Song.cs" />
     <Compile Include="User.cs" />

@@ -21,5 +21,17 @@ namespace SpotOn.Data
         public DateTimeOffset CreatedUtc { get; set; }
 
         public DateTimeOffset ModifiedUtc { get; set; }
+        enum GenreType
+        {
+            Rock,
+            Pop,
+            Country,
+            Blues,
+            Electronic,
+            Dance,
+            Jazz,
+            Dubstep,
+            IndieRock,
+        }
     }
 }

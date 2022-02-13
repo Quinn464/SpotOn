@@ -9,10 +9,10 @@ namespace SpotOn.Models
 {
     public class ArtistDetail
     {
-        public int PostId { get; set; }
-        public Guid AuthorId { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
+        public int ArtistId { get; set; }
+       
+        public string Name { get; set; }
+        public bool IsDeleted { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]

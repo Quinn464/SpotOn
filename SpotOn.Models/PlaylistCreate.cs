@@ -1,4 +1,4 @@
-﻿using SpotOn.Data;
+using SpotOn.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
+
+   
+
     // .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------.
     //| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
     //| |    _______   | || |   ______     | || |     ____     | || |  _________   | || |     ____     | || | ____ _____   | |
@@ -19,7 +22,8 @@ namespace SpotOn.Models
     //| |              | || |              | || |              | || |              | || |              | || |              | |
     //| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
     // '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
-    public class PostCreate
+    
+ public class PlaylistCreate
     {
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]

@@ -6,5 +6,10 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-   
+    public class ArtistEdit
+    {
+        public int PostId { get; set; }
+        public string Title { get; set; }
+        public string Content { get; set; }
+    }
 }

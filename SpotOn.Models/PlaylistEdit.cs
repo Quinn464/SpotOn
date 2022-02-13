@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-    class PlaylistEdit
+    public class PlaylistEdit
     {
+        public int PlaylistId { get; set; }
+        public string Name { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

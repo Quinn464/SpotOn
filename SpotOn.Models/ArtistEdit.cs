@@ -8,8 +8,8 @@ namespace SpotOn.Models
 {
     public class ArtistEdit
     {
-        public int PostId { get; set; }
-        public string Title { get; set; }
-        public string Content { get; set; }
+        public int ArtistId { get; set; }
+        public string Name { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

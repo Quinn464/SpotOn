@@ -96,6 +96,10 @@
     <Compile Include="PlaylistDetail.cs" />
     <Compile Include="PlaylistEdit.cs" />
     <Compile Include="PlaylistListItem.cs" />
+    <Compile Include="PodcastCreate.cs" />
+    <Compile Include="PodcastDetail.cs" />
+    <Compile Include="PodcastEdit.cs" />
+    <Compile Include="PodcastListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SongCreate.cs" />
     <Compile Include="SongDetail.cs" />

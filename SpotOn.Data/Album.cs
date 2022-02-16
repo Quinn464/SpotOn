@@ -25,12 +25,15 @@ namespace SpotOn.Data
     {
         [Key]
         public int AlbumId { get; set; }
-        [ForeignKey(nameof(Song))]
-        public int SongId { get; set; }
+
+        [ForeignKey(nameof(Artist))]
+        public int ArtistId { get; set; }
+
         [Required]
         public GenreType GenreType { get; set; }
         [Required]
         public string Name { get; set; }
+
         public bool IsDeleted { get; set; }
     }
 }

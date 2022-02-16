@@ -35,5 +35,10 @@ namespace SpotOn.Data
         public string Name { get; set; }
 
         public bool IsDeleted { get; set; }
+
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-    public class SongCreate
+    public class AlbumDetail
     {
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
@@ -17,6 +17,13 @@ namespace SpotOn.Models
         [Required]
         public GenreType Genre { get; set; }
 
+        public List<Song> AlbumContent { get; set; }
+
         public int ArtistId { get; set; }
+
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }

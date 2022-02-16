@@ -17,6 +17,8 @@ namespace SpotOn.Models
         [Required]
         public GenreType Genre { get; set; }
 
+        public int ArtistId { get; set; }
+
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]

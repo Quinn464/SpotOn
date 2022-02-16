@@ -41,6 +41,8 @@ namespace SpotOn.Data
         [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
 
+        public Guid AuthorId { get; set; }
+
         [Required]
         public GenreType Genre { get; set; }
 

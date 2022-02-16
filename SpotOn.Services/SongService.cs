@@ -34,5 +34,54 @@ namespace SpotOn.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public IEnumerable<SongListItem> GetSongs()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Songs
+                    .Where(e => e.AuthorId == _authorId)
+                    .Select(
+                        e =>
+                        new SongListItem
+                        {
+                            SongId = e.SongId,
+                            Name = e.Name,
+                            CreatedUtc = e.CreatedUtc,
+                        });
+                return query.ToArray();
+            }
+        }
+
+        public bool UpdateSong(SongEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity = ctx
+                            .Songs
+                            .Single(e => e.SongId == model.SongId && e.AuthorId == _authorId);
+                entity.Name = model.Name;
+                entity.Genre = model.Genre;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteSong(int songId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Songs
+                    .Single(e => e.SongId == songId && e.AuthorId == _authorId);
+                ctx.Songs.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }

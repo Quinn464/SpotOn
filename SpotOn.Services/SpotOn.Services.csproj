@@ -84,11 +84,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlbumService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SongService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpotOn.Data\SpotOn.Data.csproj">
+      <Project>{F98B2DFE-8379-4F67-99BB-967D3B076D67}</Project>
+      <Name>SpotOn.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpotOn.Models\SpotOn.Models.csproj">
+      <Project>{A56F64D0-29F3-46E2-8F6E-B29FC674911B}</Project>
+      <Name>SpotOn.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

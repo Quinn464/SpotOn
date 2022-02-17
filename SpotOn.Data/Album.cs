@@ -30,7 +30,7 @@ namespace SpotOn.Data
         public int ArtistId { get; set; }
 
         [Required]
-        public GenreType GenreType { get; set; }
+        public GenreType Genre { get; set; }
         [Required]
         public string Name { get; set; }
 
@@ -40,5 +40,6 @@ namespace SpotOn.Data
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public Guid AuthorId { get; set; }
     }
 }

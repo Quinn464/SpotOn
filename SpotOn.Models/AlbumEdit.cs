@@ -13,6 +13,7 @@ namespace SpotOn.Models
         public GenreType Genre { get; set; }
         public bool IsDeleted { get; set; }
         public int ArtistId { get; set; }
+        public int AlbumId { get; set; }
         public List<Song> AlbumContent { get; set; }
     }
 }

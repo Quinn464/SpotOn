@@ -23,6 +23,8 @@ namespace SpotOn.Data
     {
         [Key]
         public int PlaylistId { get; set; }
+        [Required]
+        public Guid AuthorId { get; set; }
 
         [Required]
         public List<Song> PlaylistContent { get; set; }

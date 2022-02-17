@@ -22,7 +22,7 @@ namespace SpotOn.Models
     //| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
     // '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
    
-public class PostListItem
+    public class PostListItem
     {
         public int PlaylistId { get; set; }
         public string Name { get; set; }

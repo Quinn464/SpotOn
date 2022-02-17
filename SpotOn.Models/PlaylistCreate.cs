@@ -28,6 +28,7 @@ namespace SpotOn.Models
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         [MaxLength(100, ErrorMessage = "There are too many characters in this field.")]
+        public int PlaylistId { get; set; }
         public string Name { get; set; }
         [MaxLength(8000)]
         public List<Song> PlaylistContent { get; set; }

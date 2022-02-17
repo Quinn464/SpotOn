@@ -30,7 +30,7 @@ namespace SpotOn.Services
             return ctx.SaveChanges() == 1;
         }
     }
-    public IEnumerable<PlaylistListItem> GetPlaylist()
+    public IEnumerable<PlaylistItem> GetPlaylist()
     {
         using (var ctx = new ApplicationDbContext())
         {
@@ -40,7 +40,7 @@ namespace SpotOn.Services
                 .Where(e => e.AuthorId == _userId)
                 .Select(
                     e =>
-                   new PlaylistListItem
+                   new PlaylistItem
                    {
                        PlaylistId = e.PlaylistId,
                        Name = e.Name,

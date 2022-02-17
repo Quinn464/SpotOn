@@ -23,7 +23,8 @@ namespace SpotOn.Data
         [Key]
         public int ArtistId { get; set; }
         [Required]
-        
+        public Guid AuthorId { get; set; }
+        [Required]
         public string Name { get; set; }
         [Required]
         public bool IsDeleted { get; set; }

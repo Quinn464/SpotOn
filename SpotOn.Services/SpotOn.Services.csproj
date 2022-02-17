@@ -84,7 +84,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="AlbumService.cs" />
+=======
+    <Compile Include="ArtistServices.cs" />
+>>>>>>> 250c049b384acbafbf3dd51af236f94852a81dac
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SongService.cs" />
   </ItemGroup>

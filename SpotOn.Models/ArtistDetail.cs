@@ -21,7 +21,8 @@ namespace SpotOn.Models
         //| |              | || |              | || |              | || |              | || |              | || |              | |
         //| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
         // '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
-        public int ArtistId { get; set; }   
+        public int ArtistId { get; set; }
+        public Guid AuthorId { get; set; }
         public string Name { get; set; }
         public bool IsDeleted { get; set; }
         [Display(Name = "Created")]

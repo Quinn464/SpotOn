@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpotOn.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -21,7 +22,10 @@ namespace SpotOn.Models
     public class PlaylistDetail
     {
         public int PlaylistId { get; set; }
-       
+        
+        public Guid AuthorId { get; set; }
+        public List<Song> PlaylistContent { get; set; }
+
         public string Name { get; set; }
         public bool IsDeleted { get; set; }
        

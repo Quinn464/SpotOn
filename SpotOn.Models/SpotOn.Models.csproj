@@ -105,6 +105,10 @@
     <Compile Include="SongDetail.cs" />
     <Compile Include="SongEdit.cs" />
     <Compile Include="SongListItem.cs" />
+    <Compile Include="UserCreate.cs" />
+    <Compile Include="UserDetail.cs" />
+    <Compile Include="UserEdit.cs" />
+    <Compile Include="UserListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

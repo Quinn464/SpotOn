@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-    class PodcastListItem
+    public class PodcastListItem
     {
         public int PodcastId { get; set; }
         public string Name { get; set; }

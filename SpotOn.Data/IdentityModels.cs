@@ -54,6 +54,7 @@ namespace SpotOn.Data
         public DbSet<Playlist> Playlists { get; set; }
         public DbSet<Song> Songs { get; set; }
         public DbSet<Album> Albums { get; set; }
+        public DbSet<Podcast> Podcasts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

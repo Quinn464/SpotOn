@@ -27,6 +27,7 @@ namespace SpotOn.Data
        
         [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
+        public virtual Artist Artist { get; set; }
 
         public GenreType Genre { get; set; }
         public bool IsDeleted { get; set; }

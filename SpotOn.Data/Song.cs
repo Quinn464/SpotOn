@@ -8,6 +8,17 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Data
 {
+    // .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------.
+    //| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+    //| |    _______   | || |   ______     | || |     ____     | || |  _________   | || |     ____     | || | ____ _____   | |
+    //| |   /  ___  |  | || |  |_ __   \   | || |   .'    `.   | || | |  _   _  |  | || |   .'    `.   | || ||_   \|_ _|   | |
+    //| |  |  (__ \_|  | || |    | |__) |  | || |  /  .--.  \  | || | |_/ | | \_|  | || |  /  .--.  \  | || |  |   \ | |   | |
+    //| |   '.___`-.   | || |    |  ___/   | || |  | |    | |  | || |     | |      | || |  | |    | |  | || |  | |\ \| |   | |
+    //| |  |`\____) |  | || |   _| |_      | || |  \  `--'  /  | || |    _| |_     | || |  \  `--'  /  | || | _| |_\   |_  | |
+    //| |  |_______.'  | || |  |_____|     | || |   `.____.'   | || |   |_____|    | || |   `.____.'   | || ||_____|\____| | |
+    //| |              | || |              | || |              | || |              | || |              | || |              | |
+    //| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+    // '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
     public enum GenreType
     {
         Rock,
@@ -26,12 +37,20 @@ namespace SpotOn.Data
         public int SongId { get; set; }
         [Required]
         public string Name { get; set; }
-        public bool IsDeleted { get; set; }
-        [ForeignKey(nameof(Album))]
-        public int AlbumId { get; set; }
+
         [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
+
+        public Guid AuthorId { get; set; }
+
         [Required]
         public GenreType Genre { get; set; }
+
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
+
+        public bool IsDeleted { get; set; }
     }
 }

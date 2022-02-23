@@ -8,7 +8,19 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 
 namespace SpotOn.Data
+
 {
+    // .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .-----------------.
+    //| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+    //| |    _______   | || |   ______     | || |     ____     | || |  _________   | || |     ____     | || | ____ _____   | |
+    //| |   /  ___  |  | || |  |_ __   \   | || |   .'    `.   | || | |  _   _  |  | || |   .'    `.   | || ||_   \|_ _|   | |
+    //| |  |  (__ \_|  | || |    | |__) |  | || |  /  .--.  \  | || | |_/ | | \_|  | || |  /  .--.  \  | || |  |   \ | |   | |
+    //| |   '.___`-.   | || |    |  ___/   | || |  | |    | |  | || |     | |      | || |  | |    | |  | || |  | |\ \| |   | |
+    //| |  |`\____) |  | || |   _| |_      | || |  \  `--'  /  | || |    _| |_     | || |  \  `--'  /  | || | _| |_\   |_  | |
+    //| |  |_______.'  | || |  |_____|     | || |   `.____.'   | || |   |_____|    | || |   `.____.'   | || ||_____|\____| | |
+    //| |              | || |              | || |              | || |              | || |              | || |              | |
+    //| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+    // '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
@@ -40,10 +52,9 @@ namespace SpotOn.Data
 
 
         public DbSet<Playlist> Playlists { get; set; }
-
-      
-
-
+        public DbSet<Song> Songs { get; set; }
+        public DbSet<Album> Albums { get; set; }
+        public DbSet<Podcast> Podcasts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

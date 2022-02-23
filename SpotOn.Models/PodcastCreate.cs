@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-    class PodcastCreate
+    public class PodcastCreate
     {
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]

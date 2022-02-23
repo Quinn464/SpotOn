@@ -87,6 +87,7 @@
     <Compile Include="AlbumService.cs" />
     <Compile Include="ArtistServices.cs" />
     <Compile Include="PlaylistServices.cs" />
+    <Compile Include="PodcastService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SongService.cs" />
   </ItemGroup>

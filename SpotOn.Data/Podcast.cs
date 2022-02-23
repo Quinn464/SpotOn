@@ -24,12 +24,23 @@ namespace SpotOn.Data
     {
         [Key]
         public int PodcastId { get; set; }
-       
+        [Required]
+        public string Name { get; set; }
+
         [ForeignKey(nameof(Artist))]
         public int ArtistId { get; set; }
         public virtual Artist Artist { get; set; }
 
+        public Guid AuthorId { get; set; }
+
+        [Required]
         public GenreType Genre { get; set; }
+
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
+        [Display(Name = "Modified")]
+        public DateTimeOffset? ModifiedUtc { get; set; }
+
         public bool IsDeleted { get; set; }
     }
 }

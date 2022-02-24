@@ -16,6 +16,6 @@ namespace SpotOn.Models
         public GenreType Genre { get; set; }
 
         [Display(Name = "Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-    }
+        public DateTimeOffset CreatedUtc { get; set; } 
+        }
 }

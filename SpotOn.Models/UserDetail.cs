@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-    class UserDetail
+    public class UserDetail
     {
         public int UserID { get; set; }
         public string Email { get; set; }

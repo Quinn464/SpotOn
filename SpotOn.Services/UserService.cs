@@ -22,7 +22,9 @@ namespace SpotOn.Services
             var entity = new User()
             {
                 AuthorId = _authorId,
-                Name = model.Name,
+
+                UserName = model.UserName,
+
                 Email = model.Email,
                 CreatedUtc = DateTimeOffset.Now,
                
@@ -48,7 +50,9 @@ namespace SpotOn.Services
                         new UserListItem
                         {
                             UserId = e.UserId,
-                            Name = e.Name,
+
+                            UserName = e.UserName,
+
                             CreatedUtc = e.CreatedUtc,
                         });
                 return query.ToArray();
@@ -62,8 +66,9 @@ namespace SpotOn.Services
                 var entity = ctx
                             .Users
                             .Single(e => e.UserId == model.UserId && e.AuthorId == _authorId);
-                entity.Name = model.Name; //.....
-                entity.Genre = model.Genre; //....
+                
+                entity.UserName = model.UserName; 
+
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;

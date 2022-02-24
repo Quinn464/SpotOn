@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-    class UserListItem
+    public class UserListItem
     {
         public int UserId { get; set; }
-        public string Name { get; set; }
+        public string UserName { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

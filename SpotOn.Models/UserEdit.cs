@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace SpotOn.Models
 {
-    class UserEdit
+    public class UserEdit
     {
         public int UserId { get; set; }
-        public string Name { get; set; }       
+        public string UserName { get; set; }       
         public bool IsDeleted { get; set; }       
     }
 }

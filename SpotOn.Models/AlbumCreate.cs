@@ -14,7 +14,6 @@ namespace SpotOn.Models
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         public string Name { get; set; }
 
-        [Required]
         public GenreType Genre { get; set; }
         public int ArtistId { get; set; }
         public List<Song> AlbumContent { get; set; }

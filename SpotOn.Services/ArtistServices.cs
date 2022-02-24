@@ -26,7 +26,7 @@ namespace SpotOn.Services
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Artist.Add(entity);
+                ctx.Artists.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -36,7 +36,7 @@ namespace SpotOn.Services
             {
                 var query =
                     ctx
-                    .Artist
+                    .Artists
                     .Where(e => e.AuthorId == _userId)
                     .Select(
                         e =>
@@ -56,7 +56,7 @@ namespace SpotOn.Services
             {
                 var entity =
                     ctx
-                    .Artist
+                    .Artists
                     .Single(e => e.ArtistId == id && e.AuthorId == _userId);
                 return
                     new ArtistDetail
@@ -74,7 +74,7 @@ namespace SpotOn.Services
             {
                 var entity =
                     ctx
-                    .Artist
+                    .Artists
                     .Single(e => e.ArtistId == model.ArtistId && e.AuthorId == _userId);
                 entity.Name = model.Name;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
@@ -90,9 +90,9 @@ namespace SpotOn.Services
             {
                 var entity =
                     ctx
-                    .Artist
+                    .Artists
                     .Single(e => e.ArtistId == ArtistId && e.AuthorId == _userId);
-                ctx.Artist.Remove(entity);
+                ctx.Artists.Remove(entity);
                 return ctx.SaveChanges() == 1;
             }
         }

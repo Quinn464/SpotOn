@@ -48,7 +48,7 @@ namespace SpotOn.Data
 
 
 
-        public DbSet<Artist> Artist { get; set; }
+        public DbSet<Artist> Artists { get; set; }
 
 
         public DbSet<Playlist> Playlists { get; set; }

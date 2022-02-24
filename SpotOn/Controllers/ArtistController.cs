@@ -9,55 +9,64 @@ using System.Web.Http;
 
 namespace SpotOn.Controllers
 {
+    [Authorize]
     public class ArtistController : ApiController
     {
-        public IHttpActionResult Get()
-        {
-            ArtistService ArtistService = CreateArtistService();
-            var posts = ArtistService.GetArtist();
-            return Ok(posts);
-        }
-
         private ArtistService CreateArtistService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var postService = new ArtistService(userId);
-            return postService;
+            var artistService = new ArtistService(userId);
+            return artistService;
         }
+        public IHttpActionResult Get()
+        {
+            ArtistService artistService = CreateArtistService();
+            var artists = artistService.GetArtist();
+            return Ok(artists);
 
-        public IHttpActionResult Post(ArtistCreate Artist)
+        }
+        public IHttpActionResult Artist(ArtistCreate artist)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-
             var service = CreateArtistService();
-
-            if (!service.CreateArtist(Artist))
+            if (!service.CreateArtist(artist))
                 return InternalServerError();
-
             return Ok();
-        }
 
-        public IHttpActionResult Put(ArtistEdit Artist)
+
+        }
+        public IHttpActionResult Get(int id)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            ArtistService artistService = CreateArtistService();
+            var artist = artistService.GetArtistById(id);
+            return Ok(artist);
 
-            var service = CreateArtistService();
-
-            if (!service.UpdateArtist(Artist))
-                return InternalServerError();
-
-            return Ok();
         }
+        public IHttpActionResult Put(ArtistEdit artist)
+        {
 
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+                var service = CreateArtistService();
+
+                if (!service.UpdateArtist(artist))
+
+                    return InternalServerError();
+
+                return Ok();
+
+            }
+        }
         public IHttpActionResult Delete(int id)
         {
             var service = CreateArtistService();
-
             if (!service.DeleteArtist(id))
-                return InternalServerError();
 
+            {
+                return InternalServerError();
+            }
             return Ok();
         }
     }

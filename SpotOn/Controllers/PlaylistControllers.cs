@@ -38,18 +38,18 @@ namespace SpotOn.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Put(PlaylistEdit Playlist)
-        {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+        //public IHttpActionResult Put(PlaylistEdit Playlist)
+        //{
+        //    if (!ModelState.IsValid)
+        //        return BadRequest(ModelState);
 
-            var service = CreatePlaylistService();
+        //    var service = CreatePlaylistService();
 
-            if (!service.UpdatePlaylist(Playlist))
-                return InternalServerError();
+        //    if (!service.UpdatePlaylist(Playlist))
+        //        return InternalServerError();
 
-            return Ok();
-        }
+        //    return Ok();
+        //}
 
         public IHttpActionResult Delete(int id)
         {

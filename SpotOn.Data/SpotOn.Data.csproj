@@ -87,7 +87,10 @@
     <!--ADD THE USER AND SONG GITHUB-->
     <Compile Include="Album.cs" />
     <Compile Include="Artist.cs" />
-    <Compile Include="IdentityModels.cs" />
+    <Compile Include="IdentityUserRoleConfig.cs" />
+    <Compile Include="IdentityUserLoginConfig.cs" />
+    <Compile Include="DbContext.cs" />
+    <Compile Include="ApplicationUser.cs" />
     <Compile Include="Playlist.cs" />
     <Compile Include="Podcast.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

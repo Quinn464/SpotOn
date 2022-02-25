@@ -1,4 +1,5 @@
-﻿using SpotOn.Data;
+﻿
+using SpotOn.Data;
 using SpotOn.Models;
 using System;
 using System.Collections.Generic;

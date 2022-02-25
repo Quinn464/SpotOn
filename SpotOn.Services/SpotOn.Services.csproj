@@ -98,11 +98,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpotOn.Data\SpotOn.Data.csproj">
-      <Project>{F98B2DFE-8379-4F67-99BB-967D3B076D67}</Project>
+      <Project>{f98b2dfe-8379-4f67-99bb-967d3b076d67}</Project>
       <Name>SpotOn.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\SpotOn.Models\SpotOn.Models.csproj">
-      <Project>{A56F64D0-29F3-46E2-8F6E-B29FC674911B}</Project>
+      <Project>{a56f64d0-29f3-46e2-8f6e-b29fc674911b}</Project>
       <Name>SpotOn.Models</Name>
     </ProjectReference>
   </ItemGroup>

@@ -31,7 +31,11 @@ namespace SpotOn.Data
         public int ArtistId { get; set; }
         public virtual Artist Artist { get; set; }
 
+
+
         public Guid AuthorId { get; set; }
+
+
 
         [Required]
         public GenreType Genre { get; set; }

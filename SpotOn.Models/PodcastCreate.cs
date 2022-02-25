@@ -11,9 +11,11 @@ namespace SpotOn.Models
     public class PodcastCreate
     {
         [Required]
+        public int ArtistId { get; set; }
+        [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         public string Name { get; set; }
-        public int ArtistId { get; set; }
+      
         [Required]
         public GenreType Genre { get; set; }
 
